@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&display=swap');
+
+@font-face {
+    font-family: 'camilla_ahoy';
+    src: url('../fonts/camilla_ahoy/Camilla\ Ahoy.otf') format('otf');
+    font-weight: normal; /* Optional: Font weight */
+    font-style: normal; /* Optional: Font style (normal, italic, etc.) */
+}
+
+/* * {
+    outline: red solid 1vmax;
+} */
+
+body {
+    width: 100vw;
+    background-color: aquamarine;
+    color: maroon;
+    font-size: 4.5vmax;
+
+    font-family: "Dancing Script";
+}
+
+section {
+    margin: 1vmax;
+    padding: 2vmax;
+}
+
+.toggle-check
+{
+    position: fixed;
+    margin-top: 30px;
+    margin-left: 90%;
+}
+
+.switch 
+{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+   position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+    border: solid red 2px;
+}
+
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 1000; /* Ensures the header appears above other content */
+
+  font-size: 3.5vmax;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  background-color: lightgray;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+}
+
+nav ul li {
+  flex: 1 1 auto;
+
+  cursor: pointer;
+  padding: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  opacity: 0.5;
+  background-color: gray;
+}
+
+main {
+  padding-top: 4vmax; /* Adjust padding to avoid content being hidden behind the fixed header */
+}
+
+
+
+
+
+
+
+
+
+h1 {
+    font-size: 5vmax;
+    font-weight: 400;
+    color: indigo;
+    font-family: "Oswald";
+}
+
+h2 {
+    font-size: 5vmax;
+    font-weight: 600;
+    color: darkgreen;
+    font-family: "Barlow Condensed";
+}
+
+h3 {
+  font-size: 2.5vmax;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.job-entry {
+    border: solid blue 2px;
+    /* height: 260vmax; */
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    align-content: space-around;
+
+    
+
+
+    padding: 20px;
+    margin-bottom: 2vmax;
+  }
+
+  .job-items {
+    /* width: 14vmax;
+    height: 45vmax; */
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "experienceArea dateArea" "descriptionArea dateArea";
+
+    margin: 2vmax;
+    background-color: darkslateblue;
+    color: white;
+  }
+  
+  .job-entry h3 {
+    margin-bottom: 2vmax;
+  }
+
+  .job-entry .titles {
+    grid-area: experienceArea;
+  }
+  
+  .job-entry .dates {
+    margin-left: auto; /* Push dates to the right */
+    margin-bottom: 2vmax;
+    grid-area: dateArea;
+
+  }
+  
+  .job-entry .description {
+    margin-top: 2vmax;
+    grid-area: descriptionArea;
+  }
+
+
+
+
+
+
+
+
+
+
+#About {
+  text-align: center;
+}
+
+
+#Experience li {
+    font-family: 'camilla_ahoy';
+    font-size: 3vmax;
+    margin-top: 2vmax;
+}
+
+#myName {
+    /* color: darkred; */
+    font-size: 8vmax;
+}
+
+
+
+
+
+
+
+
+
+
+img.profile {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+
+
+
+  #Experience > ul {
+    list-style-image: url('https://www.w3schools.com/css/sqpurple.gif');
+
+    background: #3399ff;
+    padding: 5vmax;
+  }
+
+  #Experience li {
+        background: #cce5ff;
+        color: darkblue;
+        margin: 1vmax;
+  }
+
+
+
+  #Connect {
+    margin-top: 2vmax;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .social-icon {
+    margin: 0 1vmax; /* Add spacing between icons */
+  }
+ 
+  
+
+
+
+
+
+
+#emailToImage {
+    width: 4vmax;
+}
+
+#gitHubLogo {
+    width: 15vmax;
+}
+
+
+
+/* super wide */
+@media (max-width: 2000px) {
+  body {
+    background-color: khaki;
+    color: green;
+  }
+  h1 {
+    color: blue;
+    font-family: "camilla_ahoy";
+  }
+  img.profile {
+    border-radius: 0;
+    max-width: 90vw;
+  }
+}
+
+
+
+
+/* tablet */
+@media (max-width: 1000px) {
+  
+  body {
+    background-color: lightgoldenrodyellow;
+    color: blue;
+  }
+  h1 {
+    color: darkcyan;
+    font-family: "Barlow Condensed";
+  }
+  img.profile {
+    border-radius: 20px;
+    max-width: 70vw;
+  }
+}
+
+
+
+
+
+/* mobile */
+@media (max-width: 600px) {
+  body {
+    background-color:  lightgreen;
+    color: black;
+  }
+  h1 {
+    color: indigo;
+    font-family: "Dancing Script";
+  }
+  img.profile {
+    border-radius: 100px;
+    max-width: 50vw;
+  }
+}
+
+
+
+
+/* Dark-Mode Styles */
+
+.dark-mode main, .dark-mode #nav-bar, .dark-mode footer, .dark-mode #nav-links, .dark-mode header, .dark-mode #leaveMessage, .dark-mode a, .dark-mode .social-icon i
+{
+    background-color: #333; 
+    color: #fff; 
+}
+.dark-mode h1, .dark-mode h2, .dark-mode h4, .dark-mode #nav-bar a
+{
+    color: white;
+}  
