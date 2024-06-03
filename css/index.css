@@ -11,27 +11,50 @@
     font-style: normal; /* Optional: Font style (normal, italic, etc.) */
 }
 
-/* * {
-    outline: red solid 1vmax;
-} */
-
-body {
-    width: 100vw;
-    background-color: aquamarine;
-    color: maroon;
-    font-size: 4.5vmax;
-
-    font-family: "Dancing Script";
+* {
+  box-sizing: border-box;
 }
 
-section {
-    margin: 1vmax;
-    padding: 2vmax;
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+
+
+.top {
+  background:yellow;
+  padding:5px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 .toggle-check
 {
-    position: fixed;
     margin-top: 30px;
     margin-left: 90%;
 }
@@ -80,72 +103,29 @@ input:checked + .slider:before {
 }
 
 
-header {
-  position: fixed;
-  top: 0px;
-  width: 100vw;
-  z-index: 1000; /* Ensures the header appears above other content */
 
-  font-size: 3.5vmax;
-}
 
-nav ul {
+.row {  
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   flex-wrap: wrap;
-
-  background-color: lightgray;
-  list-style-type: none;
-  margin: 0;
-  padding: 0px;
 }
 
-nav ul li {
-  flex: 1 1 auto;
 
-  cursor: pointer;
-  padding: 10px;
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
 }
 
-nav ul li a {
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  opacity: 0.5;
-  background-color: gray;
-}
-
-main {
-  padding-top: 4vmax; /* Adjust padding to avoid content being hidden behind the fixed header */
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
 }
 
 
 
-
-
-
-
-
-
-h1 {
-    font-size: 5vmax;
-    font-weight: 400;
-    color: indigo;
-    font-family: "Oswald";
-}
-
-h2 {
-    font-size: 5vmax;
-    font-weight: 600;
-    color: darkgreen;
-    font-family: "Barlow Condensed";
-}
-
-h3 {
-  font-size: 2.5vmax;
-}
 
 
 
@@ -225,23 +205,19 @@ h3 {
 
 
 
-#About {
-  text-align: center;
-}
 
 
-#Experience li {
+/* #Experience li {
     font-family: 'camilla_ahoy';
     font-size: 3vmax;
     margin-top: 2vmax;
+} */
+
+
+
+#toggle {
+  display: none;
 }
-
-#myName {
-    /* color: darkred; */
-    font-size: 8vmax;
-}
-
-
 
 
 
@@ -253,7 +229,7 @@ h3 {
 img.profile {
     max-width: 40%;
     height: auto;
-    display: block;
+    /* display: block; */
     margin: 0 auto; /* Center the image horizontally */
   }
 
@@ -306,59 +282,13 @@ img.profile {
 
 
 
-/* super wide */
-@media (max-width: 2000px) {
-  body {
-    background-color: khaki;
-    color: green;
-  }
-  h1 {
-    color: blue;
-    font-family: "camilla_ahoy";
-  }
-  img.profile {
-    border-radius: 0;
-    max-width: 90vw;
-  }
-}
-
-
-
-
-/* tablet */
-@media (max-width: 1000px) {
-  
-  body {
-    background-color: lightgoldenrodyellow;
-    color: blue;
-  }
-  h1 {
-    color: darkcyan;
-    font-family: "Barlow Condensed";
-  }
-  img.profile {
-    border-radius: 20px;
-    max-width: 70vw;
-  }
-}
-
-
 
 
 
 /* mobile */
 @media (max-width: 600px) {
-  body {
-    background-color:  lightgreen;
-    color: black;
-  }
-  h1 {
-    color: indigo;
-    font-family: "Dancing Script";
-  }
-  img.profile {
-    border-radius: 100px;
-    max-width: 50vw;
+  .row, .navbar {   
+    flex-direction: column;
   }
 }
 
@@ -367,7 +297,7 @@ img.profile {
 
 /* Dark-Mode Styles */
 
-.dark-mode main, .dark-mode #nav-bar, .dark-mode footer, .dark-mode #nav-links, .dark-mode header, .dark-mode #leaveMessage, .dark-mode a, .dark-mode .social-icon i
+.dark-mode .top, .dark-mode .row, .dark-mode .header, .dark-mode main, .dark-mode #nav-bar, .dark-mode footer, .dark-mode #nav-links, .dark-mode header, .dark-mode #leaveMessage, .dark-mode a, .dark-mode .social-icon i
 {
     background-color: #333; 
     color: #fff; 
