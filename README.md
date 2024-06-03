@@ -1,9 +1,9 @@
-# CTD-ivan-haumea-IntroToProgrammingCourse-portfolio
+Portfolio
 
 name: Ivan
 
 
-For teaching purposes of the Code The Dream Program - CTD
+For teaching purposes
 
-
+Related:
 [My Open API Project](https://github.com/yourUsernameHere/yourname-open-api)
