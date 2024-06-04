@@ -255,6 +255,10 @@ img.profile {
     margin-top: 2vmax;
   }
   
+  .social-icons > ul {
+    list-style-type: none;
+  }
+
   .social-icons {
     display: flex;
     justify-content: center; /* Center icons horizontally */

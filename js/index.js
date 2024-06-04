@@ -14,7 +14,7 @@ copyright.innerHTML = `Ivan &#169; ${thisYear}`;
 footer.appendChild(copyright);
 
 // Skills
-const skills = ["JavaScript", "HTML", "CSS", "Git / GitHub", "SQL", "jQuery"];
+const skills = ["React", "JavaScript", "Node.JS", "HTML", "CSS", "Git / GitHub / GitLab", "APIs", "SQL", "Linux", "jQuery"];
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector('ul');
 
